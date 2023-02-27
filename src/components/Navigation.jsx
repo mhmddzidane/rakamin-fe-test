@@ -1,6 +1,7 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import NavigationMenu from "./NavigationMenu";
 
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -11,11 +12,7 @@ const Navigation = () => {
         showMenu && "translate-x-0"
       }`}
     >
-      <span>this is menu</span>
-      <ul className="mt-3">
-        <li>HOME</li>
-        <li>ABOUT</li>
-      </ul>
+      <NavigationMenu closeMenu={() => setShowMenu(false)} />
     </div>
   );
 
