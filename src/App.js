@@ -9,11 +9,11 @@ import Product from "./pages/Product";
 
 function App() {
   return (
-    <div>
+    <div className="relative pb-10 min-h-screen">
       <BrowserRouter>
         <Header />
-        <HelloWorld name={"zidane"} />
-        <CounterExample />
+        {/* <HelloWorld name={"zidane"} />
+        <CounterExample /> */}
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
