@@ -22,10 +22,14 @@ const Product = () => {
 
   if (products.data) {
     content = (
-      <div>
+      <div className="flex flex-col text-center items-center">
         <h1 className="text-2xl font-bold mb-3">{products.data.name}</h1>
         <div>
-          <img src={products.data.images} alt={products.data.name} />
+          <img
+            src={products.data.images}
+            alt={products.data.name}
+            className="rounded-md w-3/4 m-auto"
+          />
         </div>
         <div className="font-bold text-xl mb-3">$ {products.data.price}</div>
         <div>{products.data.desc}</div>

@@ -21,16 +21,16 @@ const Home = () => {
 
   if (products.data) {
     content = products.data.map((product, key) => (
-      <div key={key}>
+      <li className="w-full md:w-1/2 p-2 " key={key}>
         <ProductsCard product={product} />
-      </div>
+      </li>
     ));
   }
 
   return (
     <div>
       <h1 className="font-bold text-2xl mb-3">Best Sellers</h1>
-      {content}
+      <ul className="flex flex-row flex-wrap">{content}</ul>
     </div>
   );
 };
